@@ -1,0 +1,149 @@
+/* Navbar container */
+.nav-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centering */
+    width: 100vw; /* Decreased width */
+    z-index: 30;
+    backdrop-filter: blur(50px);
+    border-radius: 0.8rem; /* Optional: Rounded corners */
+}
+
+/* Navbar content */
+.nav-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: -2rem;
+} 
+
+
+
+/* Logo */
+.logo {
+    width: 5rem;
+    height: auto;
+}
+
+/* Desktop menu */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* Adjust spacing */
+    list-style: none;
+    margin-left: -30px; /* Slightly move left */
+}
+
+/* Menu items */
+.menu-item {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    cursor: pointer; 
+}
+
+/* Same Hover Effect */
+.menu-item::before {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background: linear-gradient(90deg, #a993fe, #7e61e7 100%);
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -0.2rem;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-item:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Hire Me button */
+.contact-btn {
+    background: linear-gradient(90deg, #7e61e7, #a993fe);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    color: #a993fe;
+    background: #000;
+    outline: 2px solid #a993fe;
+}
+
+/* Menu button (Hamburger & Close) */
+.menu-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    background: linear-gradient(90deg, #a993fe, #7e61e7);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: none;
+} 
+
+.menu-btn:hover {
+    color: #a993fe;
+    background: #000;
+    border: 2px solid #a993fe;
+} 
+
+/* Mobile menu */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem;
+}
+
+.mobile-menu li {
+    margin: 15px 0;
+}
+
+.mobile-menu .contact-btn {
+    margin-top: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 769px) {
+    .menu-btn {
+        display: flex; /* Show menu button */
+    }
+    .nav-links {
+        display: none; /* Hide desktop menu */
+    }
+}
+
+/* Further adjust navbar for mid-sized screens */
+@media (max-width: 1325px) {
+    .nav-wrapper {
+        width: 100vw; /* Slightly wider for smaller screens */
+        padding: 0 2rem;
+    }
+}
