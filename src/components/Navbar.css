@@ -7,9 +7,11 @@
     left: 50%;
     transform: translateX(-50%); /* Centering */
     width: 100vw; /* Decreased width */
+    height: 6em;
     z-index: 30;
-    backdrop-filter: blur(50px);
-    border-radius: 0.8rem; /* Optional: Rounded corners */
+    
+    align-items: center;
+    
 }
 
 /* Navbar content */
@@ -70,9 +72,10 @@
 .contact-btn {
     background: linear-gradient(90deg, #7e61e7, #a993fe);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
-    padding: 1.2rem 2.5rem;
+    margin-right: 2em;
+    padding: .8rem 2.5rem;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
